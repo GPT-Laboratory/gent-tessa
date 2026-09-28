@@ -164,7 +164,7 @@ export default function App() {
           </a>
         </div>
         <div className="evidence-panel">
-          <div className="metric metric-primary"><strong>91%</strong><span>TESSA governance alignment</span></div>
+          <div className="metric metric-primary"><strong>90%</strong><span>TESSA governance alignment (LLM-assisted preliminary assessment) </span></div>
           <div className="metric"><strong>100</strong><span>benchmark scenarios</span></div>
           <div className="metric"><strong>3×</strong><span>consistency runs</span></div>
           <p className="evidence-note">Results reflect the lawyer-validated assessment used in the TESSA research evaluation.</p>
