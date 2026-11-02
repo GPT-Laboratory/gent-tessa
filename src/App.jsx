@@ -1,122 +1,195 @@
-193
-194
-195
-196
-197
-198
-199
-200
-201
-202
-203
-204
-205
-206
-207
-208
-209
-210
-211
-212
-213
-214
-215
-216
-217
-218
-219
-220
-221
-222
-223
-224
-225
-226
-227
-228
-229
-230
-231
-232
-233
-234
-235
-236
-237
-238
-239
-240
-241
-242
-243
-244
-245
-246
-247
-248
-249
-250
-251
-252
-253
-254
-255
-256
-257
-258
-259
-260
-261
-262
-263
-264
-265
-266
-267
-268
-269
-270
-271
-272
-273
-274
-275
-276
-277
-278
-279
-280
-281
-282
-283
-284
-285
-286
-287
-288
-289
-290
-291
-292
-293
-294
-295
-296
-297
-298
-299
-300
-301
-302
-303
-304
-305
-306
-307
-308
-309
-310
-311
+import "./styles.css";
+
+const tessaUrl =
+  "https://chatgpt.com/g/g-69c130a52b908191ae8c5897e1293d41-tessa";
+
+const bookUrl = "https://doi.org/10.1007/978-3-032-15207-7";
+
+const capabilities = [
+  {
+    index: "01",
+    title: "Identify your role",
+    text: "Clarify whether your organisation acts as a provider, deployer, importer, or distributor.",
+  },
+  {
+    index: "02",
+    title: "Understand the risk",
+    text: "Explore how the EU AI Act’s risk-based approach may apply to your AI use case.",
+  },
+  {
+    index: "03",
+    title: "Turn rules into actions",
+    text: "Receive practical, role-aware guidance and clear compliance-oriented checklists.",
+  },
+  {
+    index: "04",
+    title: "Follow reviewed updates",
+    text: "Ask about recent EU AI Act developments drawn from TESSA’s reviewed update workflow.",
+  },
+];
+
+const audiences = ["SMEs", "Start-ups", "AI teams", "Researchers & students"];
+
+function ArrowIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 20 20" width="18" height="18">
+      <path d="M4 10h11M11 6l4 4-4 4" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function ExternalIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 20 20" width="16" height="16">
+      <path d="M8 5H5.8A1.8 1.8 0 0 0 4 6.8v7.4A1.8 1.8 0 0 0 5.8 16h7.4a1.8 1.8 0 0 0 1.8-1.8V12M11 4h5v5M9 11l7-7" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export default function App() {
+  return (
+    <main>
+      <header className="site-header">
+        <a className="header-brand" href="#top" aria-label="TESSA home">
+          <img className="header-logo" src="./brand/tessa-logo.png" alt="TESSA" />
+        </a>
+        <nav aria-label="Main navigation">
+          <a href="#what">What it does</a>
+          <a href="#evidence">Evidence</a>
+          <a href="#about">About</a>
+        </nav>
+        <a className="header-cta" href={tessaUrl} target="_blank" rel="noreferrer">
+          Try TESSA <ArrowIcon />
+        </a>
+      </header>
+
+      <section className="hero" id="top">
+        <div className="hero-copy">
+          <p className="hero-name">TESSA</p>
+          <p className="eyebrow"><span /> Research-based EU AI Act support</p>
+          <h1>Make the EU AI Act <em>actionable.</em></h1>
+          <p className="hero-lead">
+            TESSA helps small and medium-sized enterprises understand AI roles,
+            risks, and practical next steps—without requiring specialised legal expertise.
+          </p>
+          <div className="hero-actions">
+            <a className="button button-primary" href="#start">
+              Start with TESSA <ArrowIcon />
+            </a>
+            <a className="button button-secondary" href={bookUrl} target="_blank" rel="noreferrer">
+              Read the open-access guide <ExternalIcon />
+            </a>
+          </div>
+          <p className="helper">Choose your TESSA version · Educational guidance, not legal advice</p>
+        </div>
+
+        <div className="hero-visual" aria-label="Example TESSA guidance flow">
+          <div className="visual-glow" />
+          <div className="prompt-card">
+            <div className="prompt-topline">
+              <div className="mini-brand"><span>T</span> TESSA</div>
+              <span className="status"><i /> Ready</span>
+            </div>
+            <p className="prompt-label">YOUR AI USE CASE</p>
+            <p className="prompt-question">“We use AI to screen job applications. What should we consider?”</p>
+            <div className="guidance-path">
+              <div><span>1</span><p><b>Role</b><small>Likely deployer</small></p></div>
+              <i />
+              <div><span>2</span><p><b>Risk</b><small>High-risk context</small></p></div>
+              <i />
+              <div><span>3</span><p><b>Next step</b><small>Review obligations</small></p></div>
+            </div>
+            <div className="response-preview">
+              <span className="spark">✦</span>
+              <p>TESSA explains the reasoning and turns it into a practical checklist.</p>
+            </div>
+          </div>
+          <div className="visual-note note-one">Clear language</div>
+          <div className="visual-note note-two">Role-aware</div>
+        </div>
+      </section>
+
+
+
+      <section className="section launch-section" id="start" aria-labelledby="launch-title">
+        <div className="section-heading">
+          <p className="eyebrow"><span /> Choose how to use TESSA</p>
+          <h2 id="launch-title">Start with the version that works for you.</h2>
+          <p>Use TESSA through ChatGPT or Microsoft 365 Copilot, or download the local package for offline use.</p>
+        </div>
+        <div className="launch-grid">
+          <article className="launch-card">
+            <span className="launch-index">01</span>
+            <h3>ChatGPT</h3>
+            <p>Use the current TESSA Custom GPT. The Plugin version is in development.</p>
+            <a className="button button-primary chatgpt-current" href={tessaUrl} target="_blank" rel="noreferrer">
+              Open TESSA in ChatGPT <ArrowIcon />
+            </a>
+            <button className="button button-secondary plugin-coming-soon" type="button" disabled>
+              Plugin version coming soon
+            </button>
+          </article>
+          <article className="launch-card">
+            <span className="launch-index">02</span>
+            <h3>Microsoft Copilot</h3>
+            <p>Open TESSA in Microsoft 365 Copilot. Your organisation’s account and permissions may affect access.</p>
+            <a className="button button-primary" href="https://m365.cloud.microsoft/chat/agent/T_37a08ea3-5900-aa87-1d44-cfc7fc5261ba.8cddaab9-1333-4638-ac76-6fdb2c90491e.gpt.862545e3-918f-485a-8590-0dfcdb519839" target="_blank" rel="noreferrer">Open TESSA in Copilot <ArrowIcon /></a>
+            <a className="download-link" href="/downloads/TESSA_Copilot_Quick_Access_Guide.pdf" target="_blank" rel="noreferrer">Download the Copilot quick access guide (PDF)</a>
+          </article>
+          <article className="launch-card">
+            <span className="launch-index">03</span>
+            <h3>TESSA Local</h3>
+            <p>Install TESSA Offline on macOS or Windows. Internet is needed for initial software and model downloads; local questions can then work offline.</p>
+            <a className="button button-primary" href="/downloads/TESSA-Offline-Setup.zip" download>Download TESSA Local (ZIP) <ArrowIcon /></a>
+            <a className="download-link" href="/downloads/TESSA_Offline_Installation_Guide_macOS_Windows_v1.2.pdf" target="_blank" rel="noreferrer">Read the macOS &amp; Windows installation guide (PDF)</a>
+            <small className="launch-note">The packaged knowledge includes the AI Omnibus, in force from 27 July 2026.</small>
+          </article>
+        </div>
+      </section>
+
+      <section className="trust-strip" aria-label="TESSA highlights">
+        <div><strong>Research-based</strong><span>Grounded in an open-access guide</span></div>
+        <div><strong>SME-focused</strong><span>Built around practical business needs</span></div>
+        <div><strong>3 languages</strong><span>English · Finnish · Swedish</span></div>
+        <div><strong>Human-reviewed</strong><span>Evaluated with legal expertise</span></div>
+        <div><strong>Human-validated updates</strong><span>Automatically detects and collects recent AI Act updates for human approval</span></div>
+      </section>
+
+      <section className="section capabilities-section" id="what">
+        <div className="section-heading">
+          <p className="eyebrow"><span /> From uncertainty to a next step</p>
+          <h2>Practical guidance for real AI use cases.</h2>
+          <p>Describe what your organisation does with AI. TESSA structures the regulatory questions that matter.</p>
+        </div>
+        <div className="capability-grid">
+          {capabilities.map((item) => (
+            <article className="capability-card" key={item.index}>
+              <span className="card-index">{item.index}</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section flow-section">
+        <div className="flow-copy">
+          <p className="eyebrow light"><span /> Designed for conversation</p>
+          <h2>You bring the use case. TESSA helps organise the compliance journey.</h2>
+          <p>
+            Start in everyday language. If details are missing, TESSA asks focused questions before offering a practical response.
+          </p>
+          <div className="audience-list">
+            {audiences.map((audience) => <span key={audience}>{audience}</span>)}
+          </div>
+        </div>
+        <ol className="steps">
+          <li><span>01</span><div><h3>Describe</h3><p>Explain how your business uses or plans to use AI.</p></div></li>
+          <li><span>02</span><div><h3>Clarify</h3><p>Answer focused questions about your role, context, and affected people.</p></div></li>
+          <li><span>03</span><div><h3>Act</h3><p>Receive a structured explanation and prioritised next steps.</p></div></li>
+        </ol>
+      </section>
+
       <section className="section evidence-section" id="evidence">
         <div className="evidence-intro">
           <p className="eyebrow"><span /> Evaluated as a research artefact</p>
