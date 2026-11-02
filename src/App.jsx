@@ -73,14 +73,14 @@ export default function App() {
             risks, and practical next steps—without requiring specialised legal expertise.
           </p>
           <div className="hero-actions">
-            <a className="button button-primary" href={tessaUrl} target="_blank" rel="noreferrer">
+            <a className="button button-primary" href="#start">
               Start with TESSA <ArrowIcon />
             </a>
             <a className="button button-secondary" href={bookUrl} target="_blank" rel="noreferrer">
               Read the open-access guide <ExternalIcon />
             </a>
           </div>
-          <p className="helper">Available through ChatGPT · Educational guidance, not legal advice</p>
+          <p className="helper">Choose your TESSA version · Educational guidance, not legal advice</p>
         </div>
 
         <div className="hero-visual" aria-label="Example TESSA guidance flow">
@@ -106,6 +106,39 @@ export default function App() {
           </div>
           <div className="visual-note note-one">Clear language</div>
           <div className="visual-note note-two">Role-aware</div>
+        </div>
+      </section>
+
+
+
+      <section className="section launch-section" id="start" aria-labelledby="launch-title">
+        <div className="section-heading">
+          <p className="eyebrow"><span /> Choose how to use TESSA</p>
+          <h2 id="launch-title">Start with the version that works for you.</h2>
+          <p>Use TESSA through ChatGPT or Microsoft 365 Copilot, or download the local package for offline use.</p>
+        </div>
+        <div className="launch-grid">
+          <article className="launch-card">
+            <span className="launch-index">01</span>
+            <h3>ChatGPT Plugin</h3>
+            <p>TESSA’s ChatGPT Plugin is in development. Its launch link will be added when it becomes available.</p>
+            <button className="button button-primary plugin-coming-soon" type="button" disabled>Coming soon</button>
+          </article>
+          <article className="launch-card">
+            <span className="launch-index">02</span>
+            <h3>Microsoft Copilot</h3>
+            <p>Open TESSA in Microsoft 365 Copilot. Your organisation’s account and permissions may affect access.</p>
+            <a className="button button-primary" href="https://m365.cloud.microsoft/chat/agent/T_37a08ea3-5900-aa87-1d44-cfc7fc5261ba.8cddaab9-1333-4638-ac76-6fdb2c90491e.gpt.862545e3-918f-485a-8590-0dfcdb519839" target="_blank" rel="noreferrer">Open TESSA in Copilot <ArrowIcon /></a>
+            <a className="download-link" href="/downloads/TESSA_Copilot_Quick_Access_Guide.pdf" target="_blank" rel="noreferrer">Download the Copilot quick access guide (PDF)</a>
+          </article>
+          <article className="launch-card">
+            <span className="launch-index">03</span>
+            <h3>TESSA Local</h3>
+            <p>Install TESSA Offline on macOS or Windows. Internet is needed for initial software and model downloads; local questions can then work offline.</p>
+            <a className="button button-primary" href="/downloads/TESSA-Offline-Setup.zip" download>Download TESSA Local (ZIP) <ArrowIcon /></a>
+            <a className="download-link" href="/downloads/TESSA_Offline_Installation_Guide_macOS_Windows_v1.2.pdf" target="_blank" rel="noreferrer">Read the macOS &amp; Windows installation guide (PDF)</a>
+            <small className="launch-note">The packaged knowledge includes the AI Omnibus, in force from 27 July 2026.</small>
+          </article>
         </div>
       </section>
 
@@ -164,10 +197,10 @@ export default function App() {
           </a>
         </div>
         <div className="evidence-panel">
-          <div className="metric metric-primary"><strong>90%</strong><span>TESSA governance alignment (LLM-assisted preliminary assessment) </span></div>
+          <div className="metric metric-primary"><strong>91%</strong><span>TESSA GOVERNANCE ALIGNMENT (LLM-ASSISTED PRELIMINARY ASSESSMENT)</span></div>
           <div className="metric"><strong>100</strong><span>benchmark scenarios</span></div>
           <div className="metric"><strong>3×</strong><span>consistency runs</span></div>
-          <p className="evidence-note">Results reflect the lawyer-validated assessment used in the TESSA research evaluation.</p>
+          <p className="evidence-note">The 91% score reflects the preliminary LLM-assisted assessment. Separate lawyer validation found 71% governance alignment.</p>
         </div>
       </section>
 
@@ -269,3 +302,4 @@ export default function App() {
     </main>
   );
 }
+
