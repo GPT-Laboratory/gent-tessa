@@ -127,7 +127,7 @@ export default function App() {
           <article className="launch-card">
             <span className="launch-index">02</span>
             <h3>Microsoft Copilot</h3>
-            <p>Open TESSA in Microsoft 365 Copilot. Your organisation’s account and permissions may affect access.</p>
+            <p>Open TESSA in Microsoft 365 Copilot.</p>
             <a className="button button-primary" href="https://m365.cloud.microsoft/chat/agent/T_37a08ea3-5900-aa87-1d44-cfc7fc5261ba.8cddaab9-1333-4638-ac76-6fdb2c90491e.gpt.862545e3-918f-485a-8590-0dfcdb519839" target="_blank" rel="noreferrer">Open TESSA in Copilot <ArrowIcon /></a>
             <a className="download-link" href="/downloads/TESSA_Copilot_Quick_Access_Guide.pdf" target="_blank" rel="noreferrer">Download the Copilot quick access guide (PDF)</a>
           </article>
