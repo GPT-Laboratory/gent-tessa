@@ -1,0 +1,19 @@
+.tessa-policy-page { min-height: 100vh; color: #102a3d; background: #f4f7f6; }
+.tessa-policy-header { max-width: 1180px; margin: auto; padding: 28px 24px; display: flex; justify-content: space-between; align-items: center; gap: 20px; border-bottom: 1px solid #dce5e4; }
+.tessa-policy-header a { color: #007f7a; font-weight: 700; font-size: 14px; }
+.tessa-policy-header .tessa-policy-brand { color: #071a2f; font-size: 22px; font-weight: 850; letter-spacing: .12em; }
+.tessa-policy-main { max-width: 800px; margin: 0 auto; padding: 72px 24px 100px; }
+.tessa-policy-eyebrow { color: #007f7a; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .12em; }
+.tessa-policy-page h1 { max-width: none; margin: 0 0 12px; color: #071a2f; font-size: clamp(42px, 6vw, 64px); line-height: 1.12; letter-spacing: -.045em; }
+.tessa-policy-meta { margin: 0 0 32px; color: #5c6d79; font-size: 14px; }
+.tessa-policy-warning { padding: 18px 20px; margin-bottom: 42px; background: #e9eeed; border-left: 3px solid #007f7a; color: #2d444f; font-size: 14px; line-height: 1.65; }
+.tessa-policy-content h2 { margin: 34px 0 13px; color: #071a2f; font-size: 23px; line-height: 1.35; letter-spacing: -.02em; }
+.tessa-policy-content p { margin: 0 0 16px; color: #3d5361; font-size: 15px; line-height: 1.8; }
+.tessa-policy-content a { color: #007f7a; text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.tessa-policy-contacts { margin: 14px 0 28px; display: grid; gap: 12px; }
+.tessa-policy-contacts > div { padding: 18px 20px; display: grid; gap: 5px; border: 1px solid #dce5e4; border-radius: 12px; background: white; }
+.tessa-policy-contacts strong { font-size: 14px; }
+.tessa-policy-contacts span { color: #5c6d79; font-size: 12px; }
+.tessa-policy-footer { padding: 30px 24px 40px; display: flex; flex-wrap: wrap; justify-content: center; gap: 22px; color: #d1dce1; background: #061521; font-size: 13px; }
+.tessa-policy-footer a:hover { color: #32d3c8; }
+@media(max-width:640px) { .tessa-policy-header { padding: 24px 16px; } .tessa-policy-main { padding: 50px 16px 70px; } }
