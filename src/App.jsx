@@ -291,9 +291,9 @@ export default function App() {
           <p>Built by GPT-Lab at Tampere University, Finland, as part of the Generative Artificial Intelligence (GENT) project, co-funded by the European Union.</p>
         </div>
         <div className="footer-links">
-        <a href="#/privacy">Privacy Policy</a>
-        <a href="#/terms">Terms of Service</a>
-        <a href="#/support">Support &amp; Contact</a>
+          <a href="#/privacy">Privacy Policy</a>
+          <a href="#/terms">Terms of Service</a>
+          <a href="#/support">Support &amp; Contact</a>
           
           <a href="https://gpt-lab.eu/" target="_blank" rel="noreferrer">GPT-Lab</a>
           <a href="https://www.tuni.fi/en" target="_blank" rel="noreferrer">Tampere University</a>
